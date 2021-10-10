@@ -1,0 +1,12 @@
+from random import randrange
+a = [randrange(1, 1000) for i in range (1, 1000)]
+b = []
+c = []
+for i in range(len(a)):
+    d = str(a[i])
+    if a[i] % 2 == 0 and d[-1] != '0':
+        b.append(a[i])
+    if d[-1] == '0':
+        c.append(a[i])
+print('A:', *b, end='\n')
+print('B:', *c)
